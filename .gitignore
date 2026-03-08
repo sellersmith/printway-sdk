@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.tgz
+.env
+.tokens.json
+coverage/
+.DS_Store
+
+.claude
+plans/reports/*

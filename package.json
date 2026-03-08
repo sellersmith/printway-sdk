@@ -1,0 +1,59 @@
+{
+  "name": "@sellersmith/printway-sdk",
+  "version": "1.0.0",
+  "description": "Node.js SDK for the Printway Print-on-Demand Fulfillment API",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration --exclude='**/auth*'",
+    "test:integration:auth": "vitest run tests/integration/auth.integration.test.ts",
+    "test:all": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "printway",
+    "print-on-demand",
+    "pod",
+    "fulfillment",
+    "api",
+    "sdk",
+    "ecommerce"
+  ],
+  "author": "Sellersmith",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sellersmith/printway-sdk"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "dotenv": "^17.3.1",
+    "eslint": "^9.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^2.0.0"
+  }
+}
