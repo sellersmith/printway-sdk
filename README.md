@@ -1,5 +1,9 @@
 # Printway SDK
 
+[![npm version](https://img.shields.io/npm/v/@sellersmith/printway-sdk.svg)](https://www.npmjs.com/package/@sellersmith/printway-sdk)
+[![CI](https://github.com/sellersmith/printway-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/sellersmith/printway-sdk/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Node.js / TypeScript SDK for the [Printway](https://printway.io) Print-on-Demand Fulfillment API (v3).
 
 ## Installation
@@ -225,7 +229,12 @@ printway.onTokenRefresh((newAccessToken, newRefreshToken) => {
 ## Requirements
 
 - Node.js >= 18.0.0 (uses native `fetch`)
+- Zero runtime dependencies
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and guidelines.
 
 ## License
 
-MIT
+[MIT](LICENSE)
